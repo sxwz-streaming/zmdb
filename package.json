@@ -1,0 +1,18 @@
+{
+  "name": "zmdb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:frontend": "pnpm run --filter=frontend start",
+    "dev:backend": "node ./backend/index.js",
+    "dev": "run-p dev:*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "npm-run-all": "^4.1.5"
+  }
+}

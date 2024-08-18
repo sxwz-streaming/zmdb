@@ -111,3 +111,4 @@ config.js
 backend/tmp/
 backend/static/
 frontend/build/
+data.db
