@@ -104,9 +104,6 @@ importers:
       react-window:
         specifier: ^1.8.7
         version: 1.8.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      web-vitals:
-        specifier: latest
-        version: 4.2.3
 
   mobile:
     dependencies:
@@ -149,9 +146,6 @@ importers:
       react-window:
         specifier: ^1.8.7
         version: 1.8.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      web-vitals:
-        specifier: ^2.1.4
-        version: 2.1.4
 
   tool:
     dependencies:
@@ -6287,12 +6281,6 @@ packages:
   web-streams-polyfill@3.3.3:
     resolution: {integrity: sha512-d2JWLCivmZYTSIoge9MsgFCZrt571BikcWGYkjC1khllbTeDlGqZ2D8vD8E/lJa8WGWbb7Plm8/XJYV7IJHZZw==}
     engines: {node: '>= 8'}
-
-  web-vitals@2.1.4:
-    resolution: {integrity: sha512-sVWcwhU5mX6crfI5Vd2dC4qchyTqxV8URinzt25XqVh+bHEPGH4C3NPrNionCP7Obx59wrYEbNlw4Z8sjALzZg==}
-
-  web-vitals@4.2.3:
-    resolution: {integrity: sha512-/CFAm1mNxSmOj6i0Co+iGFJ58OS4NRGVP+AWS/l509uIK5a1bSoIVaHz/ZumpHTfHSZBpgrJ+wjfpAOrTHok5Q==}
 
   webidl-conversions@4.0.2:
     resolution: {integrity: sha512-YQ+BmxuTgd6UXZW3+ICGfyqRyHXVlD5GtQr5+qjiNW7bF0cqrzX500HVXPBOvgXb5YnzDd+h0zqyv61KUD7+Sg==}
@@ -13803,10 +13791,6 @@ snapshots:
       minimalistic-assert: 1.0.1
 
   web-streams-polyfill@3.3.3: {}
-
-  web-vitals@2.1.4: {}
-
-  web-vitals@4.2.3: {}
 
   webidl-conversions@4.0.2: {}
 
