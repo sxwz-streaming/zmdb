@@ -1,6 +1,32 @@
 # zmdb
 字幕库前后端代码
 
+
+## 如何部署
+
+### 1. 使用 docker compose 部署
+
+1. 首先安装好 git 和 docker
+2. 拉取代码: `git clone https://github.com/sxwz-streaming/zmdb.git`
+3. 进入目录: `cd zmdb`
+4. 部署: `docker compose up -d`
+
+访问 `localhost:8080` 即可使用，或者你也可以修改 docker-compoe.yml 中的端口号
+
+
+### 2. 分别用 Docker 部署前端和后端
+
+该方法适用于公开访问的服务, 私有服务直接用 docker compose 即可
+
+1. 首先安装好 git 和 docker
+2. 拉取代码: `git clone https://github.com/sxwz-streaming/zmdb.git`
+3. 进入目录: `cd zmdb`
+4. 构建前端镜像: `docker build -f Dockerfile.frontend -t zmdb-fe .`
+5. 构建后端镜像: `docker build -f Dockerfile.backend -t zmdb-be .`
+6. 运行后端镜像: `docker run -d -p 10888:10888 zmdb-be -v ./data.db:/app/data.db -v ./tmp:/app/tmp`
+7. 运行前端镜像: `docker run -d -p 8080:80 zmdb-fe -e API_ENDPOINT=localhost:10888` (这里将 API_ENDPOINT 环境变量修改为你自己的后端部署即可)
+
+
 ## 接入API
 1.上传up主头像，直播封面
 
