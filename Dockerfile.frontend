@@ -1,0 +1,25 @@
+FROM node:20-alpine AS build
+
+WORKDIR /app
+
+COPY . /app
+
+RUN npm config set registry https://registry.npmmirror.com
+
+RUN npm install pnpm -g
+
+RUN pnpm install
+
+RUN pnpm run build:frontend
+
+
+FROM nginx:1.27.1-alpine
+
+RUN apk add --no-cache sed
+
+ARG API_ENDPOINT
+ENV API_ENDPOINT=${API_ENDPOINT}
+
+COPY --from=build /app/frontend/build /usr/share/nginx/html
+
+CMD ["sh", "-c", "sed -i \"s/localhost:10888/$API_ENDPOINT/g\" /usr/share/nginx/html/index.html && nginx -g 'daemon off;'"]
