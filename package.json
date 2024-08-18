@@ -7,7 +7,8 @@
     "dev:frontend": "pnpm run --filter=frontend start",
     "dev:backend": "node ./backend/index.js",
     "dev": "run-p dev:*",
-    "build:frontend": "pnpm run --filter=frontend build"
+    "build:frontend": "pnpm run --filter=frontend build",
+    "serve:backend": "node ./backend/index.js"
   },
   "keywords": [],
   "author": "",
