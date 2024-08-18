@@ -107,7 +107,6 @@ dist
 *.srt
 *.db
 package-lock.json
-config.js
 backend/tmp/
 backend/static/
 frontend/build/
