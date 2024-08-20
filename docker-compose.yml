@@ -17,5 +17,5 @@ services:
     expose:
       - 10888
     volumes:
-      - ./data.db:/app/data.db
+      - ./data:/app/data
       - ./tmp:/app/tmp
